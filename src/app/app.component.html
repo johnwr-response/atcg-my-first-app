@@ -4,6 +4,7 @@
       <h3>I'm in the AppComponent</h3>
       <app-servers></app-servers>
       <hr>
+      <h4>Assigment 1</h4>
       <ol>
         <li>Create two new components ()manually or with CLI: WarningAlert and SuccessAlert</li>
         <li>Output them beneath each other in the App Component</li>
@@ -16,6 +17,22 @@
       <hr>
       <app-warning-alert></app-warning-alert>
       <app-success-alert></app-success-alert>
+      <hr>
+      <h4>Assigment 2</h4>
+      <ol>
+        <li>Add an Input field which updates a property ('username') via Two-Way-Binding</li>
+        <li>Output the username property via String Interpolation (in a paragraph below the input)</li>
+        <li>Add a button witch may only be clicked if the username is NOT an empty string</li>
+        <li>Upon clicking the button, the username should be reset to an empty string</li>
+      </ol>
+      <hr>
+      <label>Username</label>
+      <input type="text" class="form-control" [(ngModel)]="userName">
+      <p>{{ userName }}</p>
+      <button
+        class="btn btn-primary"
+        [disabled]="userName === ''"
+        (click)="userName = ''">Reset User</button>
     </div>
   </div>
 </div>
